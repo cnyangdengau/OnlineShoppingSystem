@@ -1,9 +1,9 @@
 public class CartItem
 {
   public Product product;
-  public float quantity;
+  public Float quantity;
   
-  public CartItem(Product product, float quantity)
+  public CartItem(Product product, Float quantity)
   {
     this.product = product;
     this.quantity = quantity;
@@ -14,7 +14,7 @@ public class CartItem
     add(1.0F);
   }
   
-  public void add(float quantity)
+  public void add(Float quantity)
   {
     this.quantity += quantity;
   }

@@ -1,6 +1,4 @@
-import java.awt.Image;
 import java.io.IOException;
-import java.io.PrintStream;
 import java.net.URL;
 import java.util.HashMap;
 import javax.swing.ImageIcon;
@@ -16,7 +14,7 @@ public class ShopController
   public static ImageIcon generateIcon(String imgLoc, int width, int height)
   {
     if (IMAGE_CACHE == null) {
-      IMAGE_CACHE = new HashMap();
+      IMAGE_CACHE = new HashMap<String, ImageIcon>();
     }
     if (IMAGE_CACHE.containsKey(imgLoc)) {
       return (ImageIcon)IMAGE_CACHE.get(imgLoc);
@@ -151,7 +149,7 @@ public class ShopController
     return this.cart;
   }
   
-  public void addToCart(Product p, float quantity)
+  public void addToCart(Product p, Float quantity)
   {
     this.cart.add(p, quantity);
   }

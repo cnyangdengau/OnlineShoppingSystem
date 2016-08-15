@@ -5,9 +5,9 @@ import java.util.List;
 public class DummyModel
   implements Model
 {
-  ArrayList<Product> productList = new ArrayList();
-  HashMap<String, String> passwords = new HashMap();
-  HashMap<String, Customer> details = new HashMap();
+  ArrayList<Product> productList = new ArrayList<Product>();
+  HashMap<String, String> passwords = new HashMap<String, String>();
+  HashMap<String, Customer> details = new HashMap<String, Customer>();
   
   public DummyModel()
   {

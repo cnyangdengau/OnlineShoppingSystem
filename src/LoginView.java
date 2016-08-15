@@ -13,8 +13,7 @@ import javax.swing.JPanel;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 
-public class LoginView
-  extends View
+public class LoginView extends View
 {
   private static final long serialVersionUID = 1L;
   private JTextField username;

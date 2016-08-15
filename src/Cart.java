@@ -3,14 +3,14 @@ import java.util.List;
 
 public class Cart
 {
-  private ArrayList<CartItem> items = new ArrayList();
+  private ArrayList<CartItem> items = new ArrayList<CartItem>();
   
-  public void add(Product p, float quantity)
+  public void add(Product p, Float quantity)
   {
-    for (CartItem ci : this.items) {
-      if (ci.product.equals(p))
+    for (CartItem item : this.items) {
+      if (item.product.equals(p))
       {
-        ci.quantity += quantity;
+        item.quantity += quantity;
         return;
       }
     }

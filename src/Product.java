@@ -1,12 +1,11 @@
 import java.util.HashMap;
 import java.util.Iterator;
-import java.util.Set;
 import javax.swing.ImageIcon;
 
 public class Product
 {
-  private HashMap<String, Object> props = new HashMap();
-  private HashMap<String, String> dispNames = new HashMap();
+  private HashMap<String, Object> props = new HashMap<String, Object>();
+  private HashMap<String, String> dispNames = new HashMap<String, String>();
   private String name;
   private ImageIcon image = null;
   
@@ -50,7 +49,7 @@ public class Product
   {
     String out = "<html>";
     String key;
-    for (Iterator localIterator = this.props.keySet().iterator(); localIterator.hasNext(); out = out + getPropertyDisplayName(key) + ": " + getPropertyValue(key).toString() + "<br/>") {
+    for (Iterator<String> localIterator = this.props.keySet().iterator(); localIterator.hasNext(); out = out + getPropertyDisplayName(key) + ": " + getPropertyValue(key).toString() + "<br/>") {
       key = (String)localIterator.next();
     }
     out = out + "</html>";

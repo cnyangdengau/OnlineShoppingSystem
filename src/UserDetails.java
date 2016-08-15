@@ -12,8 +12,7 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.border.EmptyBorder;
 
-public class UserDetails
-  extends JDialog
+public class UserDetails extends JDialog
 {
   private static final long serialVersionUID = 1L;
   private final JPanel contentPanel = new JPanel();
@@ -32,7 +31,7 @@ public class UserDetails
   
   public Customer toCustomer()
   {
-    return new Customer(this.fullName.getText(), this.homeAddr.getText(), this.cardNum.getText(), this.phoneNumber.getText());
+    return new Customer(this.fullName.getText(), this.homeAddr.getText(), this.cardNum.getText(), this.phoneNumber.getText(),null);
   }
   
   public UserDetails(final ShopController c)

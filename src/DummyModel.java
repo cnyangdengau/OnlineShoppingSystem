@@ -2,8 +2,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-public class DummyModel
-  implements Model
+public class DummyModel implements Model
 {
   ArrayList<Product> productList = new ArrayList<Product>();
   HashMap<String, String> passwords = new HashMap<String, String>();
@@ -12,7 +11,7 @@ public class DummyModel
   public DummyModel()
   {
     this.passwords.put("admin", "admin");
-    this.details.put("admin", new Customer("john", "900 dandenong rd", "123", "456"));
+    this.details.put("admin", new Customer("john", "900 dandenong rd", "123", "456",false));
     for (int i = 0; i < 3; i++)
     {
       Product birb = new Product("Item #" + i);
@@ -40,7 +39,7 @@ public class DummyModel
       return false;
     }
     this.passwords.put(username, password);
-    this.details.put(username, new Customer(username, "", "", ""));
+    this.details.put(username, new Customer(username, "", "", "", false));
     return true;
   }
   
